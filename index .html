@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sjw的</title>
+    <style>  
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+   <div style="
+   background-color: #f1f1f1;
+   text-align: center;
+   padding: 40px;
+   ">
+   <p>日子很长 很多天</p>
+   <p>日子很短 眨眼间</p>
+     <img src='https://i.imgs.ovh/2025/09/23/7RL8NF.png'  width="80px" height="80px">
+   </div>
+   <div style="
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 15px;
+    line-height: 1.7;
+    color:blue
+   "><!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站问答</title>
+    <!-- 引入Tailwind CSS美化界面 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        // 当前问题编号
+        let currentQuestion = 1;
+        
+        // 处理第一个问题的回答
+        function checkOwnerName() {
+            const userNameInput = document.getElementById('ownerName');
+            const userInput = userNameInput.value.trim();
+            const resultDiv = document.getElementById('result1');
+            
+            // 清空之前的结果
+            resultDiv.innerHTML = '';
+            
+            // 验证输入
+            if (!userInput) {
+                resultDiv.innerHTML = `
+                    <div class="bg-yellow-50 border border-yellow-200 text-yellow-700 px-4 py-3 rounded mt-4 animate-fade-in">
+                        <p><i class="fa fa-exclamation-circle mr-2"></i>请输入名字后再提交</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // 检查答案
+            if (userInput.toLowerCase() === '孙佳伟'.toLowerCase()) {
+                // 正确答案
+                resultDiv.innerHTML = `
+                    <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded mt-4 animate-fade-in">
+                        <p class="font-medium"><i class="fa fa-check-circle mr-2"></i>正确！</p>
+                        <p class="mt-2">你好，朋友！欢迎访问我制作的第一个网站，能答出这个问题说明你认识我。目前本站开发的功能很有限，仅仅作为业余爱好学习。进入本站的如果不是网址链接那就是二维码，毕竟最初只是想做一个能自己编辑的二维码标识原创版权，只是忽然的想法:它们好像可以结合。就这么想了，也这么做了。从想法到实现，过去几个月，真正的从0到1，从无到有，万事开头难，第一步能绊倒你吗？</p>
+                    </div>
+                `;
+            } else {
+                // 其他输入
+                resultDiv.innerHTML = `
+                    <div class="bg-blue-50 border border-blue-200 text-blue-700 px-4 py-3 rounded mt-4 animate-fade-in">
+                        <p><i class="fa fa-handshake-o mr-2"></i>问候</p>
+                        <p class="mt-2">朋友！虽然我们素不相识，但相遇即是缘，相信你会越来越好！</p>
+                    </div>
+                `;
+            }
+            
+            // 显示第二个问题
+            setTimeout(() => {
+                document.getElementById('question2').classList.remove('hidden');
+                document.getElementById('question2').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                currentQuestion = 2;
+            }, 1500);
+        }
+        
+        // 处理第二个问题的回答
+        function checkPassword() {
+            const passwordInput = document.getElementById('password');
+            const userInput = passwordInput.value.trim();
+            const resultDiv = document.getElementById('result2');
+            
+            // 清空之前的结果
+            resultDiv.innerHTML = '';
+            
+            // 验证输入
+            if (!userInput) {
+                resultDiv.innerHTML = `
+                    <div class="bg-yellow-50 border border-yellow-200 text-yellow-700 px-4 py-3 rounded mt-4 animate-fade-in">
+                        <p><i class="fa fa-exclamation-circle mr-2"></i>请输入密码后再提交</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // 检查密码
+            if (userInput === '110110') {
+                // 正确密码
+                resultDiv.innerHTML = `
+                    <div class="bg-purple-50 border border-purple-200 text-purple-700 px-4 py-3 rounded mt-4 animate-fade-in">
+                        <p class="font-medium"><i class="fa fa-star mr-2"></i>恭喜你找到彩蛋！</p>
+                        <p class="mt-2">说是彩蛋其实我也没想好里面放什么，以后可能放个小游戏啊视频啊其它的什么东西吧，看我有没有想法了，现在就随便聊聊这个网站吧，这网站是基于国外Github维护的，为啥不用国内的？╮(๑•́ ₃ •̀๑)╭，肯定是国内的要钱啊，无论是腾讯还是阿里都没有免费的，这对小白还是太不友好了，只能邪修了꒰ ´･~･꒱੭՞՞，刚开始做出来以为还得用加速器才能打开，测试完好像不开也挺快，可能有时候进不去吧，反正现在没啥问题，以后再说以后吧。撤了</p>
+                    </div>
+                `;
+            } else {
+                // 密码错误
+                resultDiv.innerHTML = `
+                    <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mt-4 animate-fade-in">
+                        <p><i class="fa fa-lock mr-2"></i>密码不正确</p>
+                        <p class="mt-2">再试一次吧，这是一个六位数的密码哦~</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // 处理回车键提交
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                if (currentQuestion === 1) {
+                    checkOwnerName();
+                } else {
+                    checkPassword();
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .question-card {
+            transition: all 0.3s ease-out;
+        }
+        
+        .question-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen p-4 md:p-8">
+    <div class="max-w-md mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-blue-700">网站问答</h1>
+            <p class="text-gray-600 mt-2">完成问答，发现更多内容</p>
+        </div>
+        
+        <!-- 问题一 -->
+        <div id="question1" class="question-card bg-white rounded-xl shadow-md p-6 mb-6">
+            <div class="flex items-center mb-4">
+                <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold mr-3">1</div>
+                <h2 class="text-xl font-semibold text-gray-800">请输入站主的名字：</h2>
+            </div>
+            
+            <input 
+                type="text" 
+                id="ownerName" 
+                onkeypress="handleKeyPress(event)"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                placeholder="请输入名字..."
+            >
+            
+            <button 
+                onclick="checkOwnerName()"
+                class="w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex items-center justify-center gap-2"
+            >
+                <span>提交答案</span>
+                <i class="fa fa-paper-plane"></i>
+            </button>
+            
+            <div id="result1" class="mt-4"></div>
+        </div>
+        
+        <!-- 问题二（初始隐藏） -->
+        <div id="question2" class="question-card bg-white rounded-xl shadow-md p-6 mb-6 hidden">
+            <div class="flex items-center mb-4">
+                <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold mr-3">2</div>
+                <h2 class="text-xl font-semibold text-gray-800">目前就一个问题，所以这算个彩蛋（如果你知道的话）请输入六位数密码：</h2>
+            </div>
+            
+            <input 
+                type="password" 
+                id="password" 
+                onkeypress="handleKeyPress(event)"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition duration-200"
+                placeholder="请输入六位数密码..."
+            >
+            
+            <button 
+                onclick="checkPassword()"
+                class="w-full mt-4 bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 flex items-center justify-center gap-2"
+            >
+                <span>验证彩蛋</span>
+                <i class="fa fa-key"></i>
+            </button>
+            
+            <div id="result2" class="mt-4"></div>
+        </div>
+        
+        <!-- 页脚信息 -->
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>© 2025 Sjw个人网站 | 从0到1的探索</p>
+        </div>
+    </div>
+</body>
+</html>
+
+        </div>
+    </div>
+</body>
+</html>
+
+</body>
+</html></div>
+   <div style="
+   background-color: #f1f1f1;
+   text-align: center;
+   padding: 40px;
+   font-size: 12px;
+   "></div>
+  </body>
+</html>
